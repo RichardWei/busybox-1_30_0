@@ -3,6 +3,7 @@
 # sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 # sudo apt update
 # sudo apt install gcc-arm-linux-gnueabihf=7.5.0-2019.12-0ubuntu1~18.04
+# lsb_release -a
 
 
 export PATH=$PATH:/usr/local/arm/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin
