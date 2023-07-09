@@ -16,7 +16,11 @@ echo "Try to overwrite config for imx6ull"
 cp config.txt .config
 make   -j8
 
-rootfs_path="/home/wei/linux/nfs/rootfs_dev"
+# rootfs_path="/home/wei/linux/nfs/rootfs_dev"
+
+rootfs_path="rootfs_dev"
+mkdir -p ${rootfs_path}
+
 # make install CONFIG_PREFIX=/home/wei/linux/nfs/rootfs_dev
 make install CONFIG_PREFIX="${rootfs_path}"
 echo "install path ${rootfs_path}"
@@ -122,5 +126,11 @@ console::askfirst:-/bin/sh
 ::shutdown:/sbin/swapoff -a' > ${inittab_Path}
 
 echo "finsh in ${rootfs_path}"
+
+
+zip -r imx6ull_rootfs.zip ${rootfs_path}
+
+ls -lh --block-size=M imx6ull_rootfs.zip
+
 
 

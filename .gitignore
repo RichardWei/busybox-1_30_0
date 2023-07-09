@@ -61,3 +61,6 @@ TAGS
 # user-supplied scripts
 #
 /embed
+
+rootfs
+*.zip
